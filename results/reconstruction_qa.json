@@ -1,0 +1,306 @@
+{
+  "hypo_ffs_uhf": {
+    "curve_id": "hypo_ffs_uhf",
+    "trial": "HYPO-RT-PC",
+    "arm": "experimental",
+    "outcome": "Failure-free survival",
+    "rows": 589,
+    "n_at_risk_t0": 589,
+    "events_reconstructed": 153,
+    "events_reported": null,
+    "max_fit_deviation": 0.001,
+    "milestones": [
+      {
+        "year": 5,
+        "published": 84.6,
+        "digitized": 84.61,
+        "diff": 0.01,
+        "reconstructed": 84.61,
+        "diff_reconstructed": 0.01,
+        "pass": true
+      },
+      {
+        "year": 10,
+        "published": 71.5,
+        "digitized": 71.53,
+        "diff": 0.03,
+        "reconstructed": 71.63,
+        "diff_reconstructed": 0.13,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "hypo_ffs_cf": {
+    "curve_id": "hypo_ffs_cf",
+    "trial": "HYPO-RT-PC",
+    "arm": "control",
+    "outcome": "Failure-free survival",
+    "rows": 591,
+    "n_at_risk_t0": 591,
+    "events_reconstructed": 186,
+    "events_reported": null,
+    "max_fit_deviation": 0.0011,
+    "milestones": [
+      {
+        "year": 5,
+        "published": 85.5,
+        "digitized": 85.48,
+        "diff": -0.02,
+        "reconstructed": 85.47,
+        "diff_reconstructed": -0.03,
+        "pass": true
+      },
+      {
+        "year": 10,
+        "published": 65.0,
+        "digitized": 65.01,
+        "diff": 0.01,
+        "reconstructed": 64.97,
+        "diff_reconstructed": -0.03,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "hypo_os_uhf": {
+    "curve_id": "hypo_os_uhf",
+    "trial": "HYPO-RT-PC",
+    "arm": "experimental",
+    "outcome": "Overall survival",
+    "rows": 589,
+    "n_at_risk_t0": 589,
+    "events_reconstructed": 109,
+    "events_reported": null,
+    "max_fit_deviation": 0.0001,
+    "milestones": [
+      {
+        "year": 5,
+        "published": 94.4,
+        "digitized": 94.41,
+        "diff": 0.01,
+        "reconstructed": 94.4,
+        "diff_reconstructed": -0.0,
+        "pass": true
+      },
+      {
+        "year": 10,
+        "published": 81.0,
+        "digitized": 81.24,
+        "diff": 0.24,
+        "reconstructed": 81.23,
+        "diff_reconstructed": 0.23,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "hypo_os_cf": {
+    "curve_id": "hypo_os_cf",
+    "trial": "HYPO-RT-PC",
+    "arm": "control",
+    "outcome": "Overall survival",
+    "rows": 591,
+    "n_at_risk_t0": 591,
+    "events_reconstructed": 123,
+    "events_reported": null,
+    "max_fit_deviation": 0.0004,
+    "milestones": [
+      {
+        "year": 5,
+        "published": 95.6,
+        "digitized": 95.78,
+        "diff": 0.18,
+        "reconstructed": 95.77,
+        "diff_reconstructed": 0.17,
+        "pass": true
+      },
+      {
+        "year": 10,
+        "published": 78.9,
+        "digitized": 78.91,
+        "diff": 0.01,
+        "reconstructed": 78.89,
+        "diff_reconstructed": -0.01,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "paceb_ffbcf_sbrt": {
+    "curve_id": "paceb_ffbcf_sbrt",
+    "trial": "PACE-B",
+    "arm": "experimental",
+    "outcome": "Freedom from biochemical or clinical failure",
+    "rows": 433,
+    "n_at_risk_t0": 433,
+    "events_reconstructed": 20,
+    "events_reported": null,
+    "max_fit_deviation": 0.0023,
+    "milestones": [
+      {
+        "year": 5,
+        "published": 95.8,
+        "digitized": 95.98,
+        "diff": 0.18,
+        "reconstructed": 96.04,
+        "diff_reconstructed": 0.24,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "paceb_ffbcf_ctrl": {
+    "curve_id": "paceb_ffbcf_ctrl",
+    "trial": "PACE-B",
+    "arm": "control",
+    "outcome": "Freedom from biochemical or clinical failure",
+    "rows": 441,
+    "n_at_risk_t0": 441,
+    "events_reconstructed": 29,
+    "events_reported": null,
+    "max_fit_deviation": 0.0042,
+    "milestones": [
+      {
+        "year": 5,
+        "published": 94.6,
+        "digitized": 94.82,
+        "diff": 0.22,
+        "reconstructed": 94.84,
+        "diff_reconstructed": 0.24,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "paceb_os_sbrt": {
+    "curve_id": "paceb_os_sbrt",
+    "trial": "PACE-B",
+    "arm": "experimental",
+    "outcome": "Overall survival",
+    "rows": 433,
+    "n_at_risk_t0": 433,
+    "events_reconstructed": 33,
+    "events_reported": null,
+    "max_fit_deviation": 0.0044,
+    "milestones": [],
+    "flags": [],
+    "pass": true
+  },
+  "paceb_os_ctrl": {
+    "curve_id": "paceb_os_ctrl",
+    "trial": "PACE-B",
+    "arm": "control",
+    "outcome": "Overall survival",
+    "rows": 441,
+    "n_at_risk_t0": 441,
+    "events_reconstructed": 28,
+    "events_reported": null,
+    "max_fit_deviation": 0.0027,
+    "milestones": [],
+    "flags": [],
+    "pass": true
+  },
+  "gu005_dfs_sbrt": {
+    "curve_id": "gu005_dfs_sbrt",
+    "trial": "NRG-GU005",
+    "arm": "experimental",
+    "outcome": "Disease-free survival",
+    "rows": 353,
+    "n_at_risk_t0": 353,
+    "events_reconstructed": 53,
+    "events_reported": 54,
+    "max_fit_deviation": 0.0038,
+    "milestones": [
+      {
+        "year": 3,
+        "published": 88.6,
+        "digitized": 88.65,
+        "diff": 0.05,
+        "reconstructed": 88.7,
+        "diff_reconstructed": 0.1,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "gu005_dfs_mhimrt": {
+    "curve_id": "gu005_dfs_mhimrt",
+    "trial": "NRG-GU005",
+    "arm": "control",
+    "outcome": "Disease-free survival",
+    "rows": 345,
+    "n_at_risk_t0": 345,
+    "events_reconstructed": 36,
+    "events_reported": 36,
+    "max_fit_deviation": 0.0028,
+    "milestones": [
+      {
+        "year": 3,
+        "published": 92.1,
+        "digitized": 92.08,
+        "diff": -0.02,
+        "reconstructed": 92.15,
+        "diff_reconstructed": 0.05,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "gu005_os_sbrt": {
+    "curve_id": "gu005_os_sbrt",
+    "trial": "NRG-GU005",
+    "arm": "experimental",
+    "outcome": "Overall survival",
+    "rows": 353,
+    "n_at_risk_t0": 353,
+    "events_reconstructed": 16,
+    "events_reported": 16,
+    "max_fit_deviation": 0.0037,
+    "milestones": [
+      {
+        "year": 5,
+        "published": 91.1,
+        "digitized": 91.06,
+        "diff": -0.04,
+        "reconstructed": 91.43,
+        "diff_reconstructed": 0.33,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  },
+  "gu005_os_mhimrt": {
+    "curve_id": "gu005_os_mhimrt",
+    "trial": "NRG-GU005",
+    "arm": "control",
+    "outcome": "Overall survival",
+    "rows": 345,
+    "n_at_risk_t0": 345,
+    "events_reconstructed": 13,
+    "events_reported": 13,
+    "max_fit_deviation": 0.0014,
+    "milestones": [
+      {
+        "year": 5,
+        "published": 94.5,
+        "digitized": 94.55,
+        "diff": 0.05,
+        "reconstructed": 94.68,
+        "diff_reconstructed": 0.18,
+        "pass": true
+      }
+    ],
+    "flags": [],
+    "pass": true
+  }
+}

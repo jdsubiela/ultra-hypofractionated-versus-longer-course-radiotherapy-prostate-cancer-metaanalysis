@@ -1,0 +1,604 @@
+{
+  "seed": 20260819,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "lifelines": "0.30.1"
+  },
+  "pairs": [
+    {
+      "trial": "HYPO-RT-PC",
+      "outcome": "Failure-free survival",
+      "excluded": false,
+      "t_max": 10.0,
+      "n_exp": 589,
+      "n_ctl": 591,
+      "events_exp": 153,
+      "events_ctl": 186,
+      "rmst": [
+        {
+          "tau_y": 3.0,
+          "rmst_exp": 2.8716,
+          "rmst_ctl": 2.8975,
+          "diff_y": -0.026,
+          "se": 0.0251,
+          "lo": -0.0751,
+          "hi": 0.0232,
+          "p": 0.30034,
+          "diff_months": -0.31,
+          "lo_months": -0.9,
+          "hi_months": 0.28
+        },
+        {
+          "tau_y": 5.0,
+          "rmst_exp": 4.6181,
+          "rmst_ctl": 4.6644,
+          "diff_y": -0.0463,
+          "se": 0.0579,
+          "lo": -0.1598,
+          "hi": 0.0673,
+          "p": 0.42461,
+          "diff_months": -0.56,
+          "lo_months": -1.92,
+          "hi_months": 0.81
+        },
+        {
+          "tau_y": 10.0,
+          "rmst_exp": 8.496,
+          "rmst_ctl": 8.4035,
+          "diff_y": 0.0926,
+          "se": 0.1627,
+          "lo": -0.2264,
+          "hi": 0.4115,
+          "p": 0.56947,
+          "diff_months": 1.11,
+          "lo_months": -2.72,
+          "hi_months": 4.94
+        }
+      ],
+      "cox": {
+        "full": {
+          "hr": 0.8175,
+          "se_log": 0.10918,
+          "lo": 0.66,
+          "hi": 1.0126,
+          "p": 0.06498,
+          "p_proportional_hazards": 0.0048,
+          "n": 1180,
+          "events": 339
+        },
+        "landmark_3y": {
+          "hr": 1.1652,
+          "se_log": 0.19376,
+          "lo": 0.797,
+          "hi": 1.7035,
+          "p": 0.43002,
+          "p_proportional_hazards": 0.50467,
+          "n": 1180,
+          "events": 107
+        },
+        "landmark_5y": {
+          "hr": 1.0733,
+          "se_log": 0.15254,
+          "lo": 0.796,
+          "hi": 1.4474,
+          "p": 0.64272,
+          "p_proportional_hazards": 0.37643,
+          "n": 1180,
+          "events": 172
+        }
+      }
+    },
+    {
+      "trial": "HYPO-RT-PC",
+      "outcome": "Overall survival",
+      "excluded": false,
+      "t_max": 10.0,
+      "n_exp": 589,
+      "n_ctl": 591,
+      "events_exp": 109,
+      "events_ctl": 123,
+      "rmst": [
+        {
+          "tau_y": 3.0,
+          "rmst_exp": 2.9756,
+          "rmst_ctl": 2.9783,
+          "diff_y": -0.0027,
+          "se": 0.0108,
+          "lo": -0.0238,
+          "hi": 0.0184,
+          "p": 0.79913,
+          "diff_months": -0.03,
+          "lo_months": -0.29,
+          "hi_months": 0.22
+        },
+        {
+          "tau_y": 5.0,
+          "rmst_exp": 4.8957,
+          "rmst_ctl": 4.9188,
+          "diff_y": -0.0231,
+          "se": 0.0285,
+          "lo": -0.0788,
+          "hi": 0.0327,
+          "p": 0.41739,
+          "diff_months": -0.28,
+          "lo_months": -0.95,
+          "hi_months": 0.39
+        },
+        {
+          "tau_y": 10.0,
+          "rmst_exp": 9.3009,
+          "rmst_ctl": 9.2894,
+          "diff_y": 0.0115,
+          "se": 0.1028,
+          "lo": -0.1899,
+          "hi": 0.2129,
+          "p": 0.91067,
+          "diff_months": 0.14,
+          "lo_months": -2.28,
+          "hi_months": 2.56
+        }
+      ],
+      "cox": {
+        "full": {
+          "hr": 0.8846,
+          "se_log": 0.13155,
+          "lo": 0.6836,
+          "hi": 1.1448,
+          "p": 0.35141,
+          "p_proportional_hazards": 0.23073,
+          "n": 1180,
+          "events": 232
+        },
+        "landmark_3y": {
+          "hr": 1.4064,
+          "se_log": 0.41404,
+          "lo": 0.6247,
+          "hi": 3.1663,
+          "p": 0.4101,
+          "p_proportional_hazards": 0.38751,
+          "n": 1180,
+          "events": 24
+        },
+        "landmark_5y": {
+          "hr": 1.3327,
+          "se_log": 0.26515,
+          "lo": 0.7926,
+          "hi": 2.2409,
+          "p": 0.27876,
+          "p_proportional_hazards": 0.92115,
+          "n": 1180,
+          "events": 58
+        }
+      }
+    },
+    {
+      "trial": "PACE-B",
+      "outcome": "Freedom from biochemical/clinical failure",
+      "excluded": false,
+      "t_max": 5.99,
+      "n_exp": 433,
+      "n_ctl": 441,
+      "events_exp": 20,
+      "events_ctl": 29,
+      "rmst": [
+        {
+          "tau_y": 3.0,
+          "rmst_exp": 2.9762,
+          "rmst_ctl": 2.9622,
+          "diff_y": 0.014,
+          "se": 0.0167,
+          "lo": -0.0187,
+          "hi": 0.0467,
+          "p": 0.40087,
+          "diff_months": 0.17,
+          "lo_months": -0.22,
+          "hi_months": 0.56
+        },
+        {
+          "tau_y": 5.0,
+          "rmst_exp": 4.921,
+          "rmst_ctl": 4.8961,
+          "diff_y": 0.0249,
+          "se": 0.0364,
+          "lo": -0.0465,
+          "hi": 0.0962,
+          "p": 0.49463,
+          "diff_months": 0.3,
+          "lo_months": -0.56,
+          "hi_months": 1.15
+        }
+      ],
+      "cox": {
+        "full": {
+          "hr": 0.6764,
+          "se_log": 0.29093,
+          "lo": 0.3824,
+          "hi": 1.1964,
+          "p": 0.17903,
+          "p_proportional_hazards": 0.69585,
+          "n": 874,
+          "events": 49
+        },
+        "landmark_3y": {
+          "hr": 0.8048,
+          "se_log": 0.47435,
+          "lo": 0.3176,
+          "hi": 2.0391,
+          "p": 0.64706,
+          "p_proportional_hazards": 0.18469,
+          "n": 874,
+          "events": 18
+        },
+        "landmark_5y": {
+          "hr": 0.7652,
+          "se_log": 0.33185,
+          "lo": 0.3993,
+          "hi": 1.4663,
+          "p": 0.41991,
+          "p_proportional_hazards": 0.9071,
+          "n": 874,
+          "events": 37
+        }
+      }
+    },
+    {
+      "trial": "PACE-B",
+      "outcome": "Overall survival",
+      "excluded": false,
+      "t_max": 6.0,
+      "n_exp": 433,
+      "n_ctl": 441,
+      "events_exp": 33,
+      "events_ctl": 28,
+      "rmst": [
+        {
+          "tau_y": 3.0,
+          "rmst_exp": 2.9676,
+          "rmst_ctl": 2.9868,
+          "diff_y": -0.0192,
+          "se": 0.0122,
+          "lo": -0.0432,
+          "hi": 0.0047,
+          "p": 0.11514,
+          "diff_months": -0.23,
+          "lo_months": -0.52,
+          "hi_months": 0.06
+        },
+        {
+          "tau_y": 5.0,
+          "rmst_exp": 4.8685,
+          "rmst_ctl": 4.9403,
+          "diff_y": -0.0718,
+          "se": 0.0337,
+          "lo": -0.1379,
+          "hi": -0.0057,
+          "p": 0.03326,
+          "diff_months": -0.86,
+          "lo_months": -1.65,
+          "hi_months": -0.07
+        }
+      ],
+      "cox": {
+        "full": {
+          "hr": 1.206,
+          "se_log": 0.25698,
+          "lo": 0.7288,
+          "hi": 1.9956,
+          "p": 0.46617,
+          "p_proportional_hazards": 0.01908,
+          "n": 874,
+          "events": 61
+        },
+        "landmark_3y": {
+          "hr": 2.5273,
+          "se_log": 0.48305,
+          "lo": 0.9806,
+          "hi": 6.5138,
+          "p": 0.05493,
+          "p_proportional_hazards": 0.78104,
+          "n": 874,
+          "events": 21
+        },
+        "landmark_5y": {
+          "hr": 1.9595,
+          "se_log": 0.32934,
+          "lo": 1.0275,
+          "hi": 3.7366,
+          "p": 0.0411,
+          "p_proportional_hazards": 0.4545,
+          "n": 874,
+          "events": 41
+        }
+      }
+    },
+    {
+      "trial": "NRG-GU005",
+      "outcome": "Disease-free survival",
+      "excluded": false,
+      "t_max": 5.0,
+      "n_exp": 353,
+      "n_ctl": 345,
+      "events_exp": 53,
+      "events_ctl": 36,
+      "rmst": [
+        {
+          "tau_y": 3.0,
+          "rmst_exp": 2.835,
+          "rmst_ctl": 2.9205,
+          "diff_y": -0.0855,
+          "se": 0.0327,
+          "lo": -0.1496,
+          "hi": -0.0215,
+          "p": 0.00887,
+          "diff_months": -1.03,
+          "lo_months": -1.79,
+          "hi_months": -0.26
+        },
+        {
+          "tau_y": 5.0,
+          "rmst_exp": 4.5149,
+          "rmst_ctl": 4.6593,
+          "diff_y": -0.1444,
+          "se": 0.0836,
+          "lo": -0.3083,
+          "hi": 0.0195,
+          "p": 0.08416,
+          "diff_months": -1.73,
+          "lo_months": -3.7,
+          "hi_months": 0.23
+        }
+      ],
+      "cox": {
+        "full": {
+          "hr": 1.3742,
+          "se_log": 0.21617,
+          "lo": 0.8996,
+          "hi": 2.0992,
+          "p": 0.14142,
+          "p_proportional_hazards": 0.14985,
+          "n": 698,
+          "events": 89
+        },
+        "landmark_3y": {
+          "hr": 1.5835,
+          "se_log": 0.26422,
+          "lo": 0.9435,
+          "hi": 2.6579,
+          "p": 0.08191,
+          "p_proportional_hazards": 0.00993,
+          "n": 698,
+          "events": 61
+        },
+        "landmark_5y": {
+          "hr": 1.3742,
+          "se_log": 0.21617,
+          "lo": 0.8996,
+          "hi": 2.0992,
+          "p": 0.14142,
+          "p_proportional_hazards": 0.14985,
+          "n": 698,
+          "events": 89,
+          "landmark_tolerance_y": 0.00124
+        }
+      }
+    },
+    {
+      "trial": "NRG-GU005",
+      "outcome": "Overall survival",
+      "excluded": false,
+      "t_max": 5.0,
+      "n_exp": 353,
+      "n_ctl": 345,
+      "events_exp": 16,
+      "events_ctl": 13,
+      "rmst": [
+        {
+          "tau_y": 3.0,
+          "rmst_exp": 2.967,
+          "rmst_ctl": 2.9632,
+          "diff_y": 0.0039,
+          "se": 0.0181,
+          "lo": -0.0317,
+          "hi": 0.0394,
+          "p": 0.83123,
+          "diff_months": 0.05,
+          "lo_months": -0.38,
+          "hi_months": 0.47
+        },
+        {
+          "tau_y": 5.0,
+          "rmst_exp": 4.8689,
+          "rmst_ctl": 4.8668,
+          "diff_y": 0.0022,
+          "se": 0.0496,
+          "lo": -0.095,
+          "hi": 0.0993,
+          "p": 0.96518,
+          "diff_months": 0.03,
+          "lo_months": -1.14,
+          "hi_months": 1.19
+        }
+      ],
+      "cox": {
+        "full": {
+          "hr": 1.0922,
+          "se_log": 0.37399,
+          "lo": 0.5248,
+          "hi": 2.2733,
+          "p": 0.81352,
+          "p_proportional_hazards": 0.2048,
+          "n": 698,
+          "events": 29
+        },
+        "landmark_3y": {
+          "hr": 0.9182,
+          "se_log": 0.4715,
+          "lo": 0.3644,
+          "hi": 2.3134,
+          "p": 0.85628,
+          "p_proportional_hazards": 0.8581,
+          "n": 698,
+          "events": 18
+        },
+        "landmark_5y": {
+          "hr": 1.0922,
+          "se_log": 0.37399,
+          "lo": 0.5248,
+          "hi": 2.2733,
+          "p": 0.81352,
+          "p_proportional_hazards": 0.2048,
+          "n": 698,
+          "events": 29
+        }
+      }
+    }
+  ],
+  "meta": {
+    "composite_failure": {
+      "landmark_3y": {
+        "k": 3,
+        "trials": [
+          "HYPO-RT-PC",
+          "PACE-B",
+          "NRG-GU005"
+        ],
+        "model": "common effect",
+        "hr": 1.238,
+        "lo": 0.925,
+        "hi": 1.656,
+        "I2": 0.0,
+        "tau2": 0.0,
+        "p_Q": 0.4112,
+        "random_pm_hk": {
+          "hr": 1.238,
+          "lo": 0.654,
+          "hi": 2.344,
+          "tau2": 0.0
+        }
+      },
+      "landmark_5y": {
+        "k": 3,
+        "trials": [
+          "HYPO-RT-PC",
+          "PACE-B",
+          "NRG-GU005"
+        ],
+        "model": "common effect",
+        "hr": 1.106,
+        "lo": 0.88,
+        "hi": 1.39,
+        "I2": 12.3,
+        "tau2": 0.00683,
+        "p_Q": 0.3202,
+        "random_pm_hk": {
+          "hr": 1.103,
+          "lo": 0.623,
+          "hi": 1.954,
+          "tau2": 0.0095
+        },
+        "landmark_tolerance_trials": [
+          "NRG-GU005"
+        ]
+      },
+      "rmst_3y": {
+        "k": 3,
+        "trials": [
+          "HYPO-RT-PC",
+          "PACE-B",
+          "NRG-GU005"
+        ],
+        "diff_months": -0.32,
+        "lo_months": -0.97,
+        "hi_months": 0.33,
+        "I2": 74.3,
+        "tau2": 0.001678
+      },
+      "rmst_5y": {
+        "k": 3,
+        "trials": [
+          "HYPO-RT-PC",
+          "PACE-B",
+          "NRG-GU005"
+        ],
+        "diff_months": -0.39,
+        "lo_months": -1.46,
+        "hi_months": 0.67,
+        "I2": 48.5,
+        "tau2": 0.003
+      }
+    },
+    "overall_survival": {
+      "landmark_3y": {
+        "k": 3,
+        "trials": [
+          "HYPO-RT-PC",
+          "PACE-B",
+          "NRG-GU005"
+        ],
+        "model": "common effect",
+        "hr": 1.465,
+        "lo": 0.877,
+        "hi": 2.446,
+        "I2": 11.7,
+        "tau2": 0.02756,
+        "p_Q": 0.3225,
+        "random_pm_hk": {
+          "hr": 1.467,
+          "lo": 0.439,
+          "hi": 4.904,
+          "tau2": 0.03032
+        }
+      },
+      "landmark_5y": {
+        "k": 3,
+        "trials": [
+          "HYPO-RT-PC",
+          "PACE-B",
+          "NRG-GU005"
+        ],
+        "model": "common effect",
+        "hr": 1.429,
+        "lo": 1.003,
+        "hi": 2.036,
+        "I2": 0.0,
+        "tau2": 0.0,
+        "p_Q": 0.4753,
+        "random_pm_hk": {
+          "hr": 1.429,
+          "lo": 0.656,
+          "hi": 3.11,
+          "tau2": 0.0
+        }
+      },
+      "rmst_3y": {
+        "k": 3,
+        "trials": [
+          "HYPO-RT-PC",
+          "PACE-B",
+          "NRG-GU005"
+        ],
+        "diff_months": -0.09,
+        "lo_months": -0.27,
+        "hi_months": 0.08,
+        "I2": 0.0,
+        "tau2": 0.0
+      },
+      "rmst_5y": {
+        "k": 3,
+        "trials": [
+          "HYPO-RT-PC",
+          "PACE-B",
+          "NRG-GU005"
+        ],
+        "diff_months": -0.43,
+        "lo_months": -0.9,
+        "hi_months": 0.04,
+        "I2": 0.0,
+        "tau2": 0.0
+      }
+    }
+  }
+}

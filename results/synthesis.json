@@ -1,0 +1,983 @@
+{
+  "seed": 20260819,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "lifelines": "0.30.1"
+  },
+  "eqd2": [
+    {
+      "study": "HYPO-RT-PC",
+      "arm": "experimental",
+      "total_dose": 42.7,
+      "n_fx": 7,
+      "dose_per_fx": 6.1,
+      "eqd2_ab1_5": 92.7,
+      "eqd2_ab3": 77.7
+    },
+    {
+      "study": "HYPO-RT-PC",
+      "arm": "control",
+      "total_dose": 78.0,
+      "n_fx": 39,
+      "dose_per_fx": 2.0,
+      "eqd2_ab1_5": 78.0,
+      "eqd2_ab3": 78.0
+    },
+    {
+      "study": "PACE-B",
+      "arm": "experimental",
+      "total_dose": 36.25,
+      "n_fx": 5,
+      "dose_per_fx": 7.25,
+      "eqd2_ab1_5": 90.6,
+      "eqd2_ab3": 74.3
+    },
+    {
+      "study": "PACE-B",
+      "arm": "control",
+      "total_dose": 62.0,
+      "n_fx": 20,
+      "dose_per_fx": 3.1,
+      "eqd2_ab1_5": 81.5,
+      "eqd2_ab3": 75.6
+    },
+    {
+      "study": "PACE-B",
+      "arm": "experimental (CTV boost)",
+      "total_dose": 40.0,
+      "n_fx": 5,
+      "dose_per_fx": 8.0,
+      "eqd2_ab1_5": 108.6,
+      "eqd2_ab3": 88.0
+    },
+    {
+      "study": "NRG-GU005",
+      "arm": "experimental",
+      "total_dose": 36.25,
+      "n_fx": 5,
+      "dose_per_fx": 7.25,
+      "eqd2_ab1_5": 90.6,
+      "eqd2_ab3": 74.3
+    },
+    {
+      "study": "NRG-GU005",
+      "arm": "control",
+      "total_dose": 70.0,
+      "n_fx": 28,
+      "dose_per_fx": 2.5,
+      "eqd2_ab1_5": 80.0,
+      "eqd2_ab3": 77.0
+    },
+    {
+      "study": "NRG-GU005",
+      "arm": "experimental (PTV max cap)",
+      "total_dose": 38.78,
+      "n_fx": 5,
+      "dose_per_fx": 7.756,
+      "eqd2_ab1_5": 102.6,
+      "eqd2_ab3": 83.4
+    }
+  ],
+  "outcomes": {
+    "efficacy_primary": {
+      "outcome": "efficacy_primary",
+      "label": "Composite oncological failure (trial-defined primary)",
+      "k": 3,
+      "estimator": "Paule-Mandel + modified Hartung-Knapp",
+      "hr_random": 0.947,
+      "ci_random": [
+        0.436,
+        2.058
+      ],
+      "hr_fixed": 0.905,
+      "pred_interval": [
+        0.019,
+        47.827
+      ],
+      "pred_interval_informative": false,
+      "Q": 5.035,
+      "df": 2,
+      "p_Q": 0.0786,
+      "I2": 60.3,
+      "tau2": 0.06273,
+      "hk": {
+        "df": 2,
+        "t_crit": 4.303,
+        "se": 0.1804,
+        "se_classic": 0.1804,
+        "floor_applied": true
+      },
+      "sens_dl": {
+        "hr": 0.946,
+        "ci": [
+          0.679,
+          1.317
+        ],
+        "tau2": 0.05152
+      },
+      "sens_bayes": {
+        "hr": 0.935,
+        "ci": [
+          0.565,
+          1.599
+        ],
+        "tau_median": 0.2768,
+        "prior": "half-normal(0, 0.5) on tau"
+      },
+      "studies": [
+        {
+          "study": "HYPO-RT-PC",
+          "label": "HYPO-RT-PC (10-y)",
+          "hr": 0.85,
+          "lo": 0.7,
+          "hi": 1.04,
+          "yi": -0.16251892949777494,
+          "sei": 0.10099564589318688,
+          "weight_pct": 44.6,
+          "comparator_type": "conventional",
+          "src": "Nilsson 2026, Lancet Oncol, Suppl. Table 3 (unadjusted)"
+        },
+        {
+          "study": "PACE-B",
+          "label": "PACE-B (5-y)",
+          "hr": 0.73,
+          "lo": 0.44,
+          "hi": 1.21,
+          "yi": -0.31471074483970024,
+          "sei": 0.25806619908780437,
+          "weight_pct": 25.2,
+          "comparator_type": "mixed",
+          "src": "van As 2024, N Engl J Med, Results (95% CI)"
+        },
+        {
+          "study": "NRG-GU005",
+          "label": "NRG-GU005 (3-y)",
+          "hr": 1.38,
+          "lo": 0.91,
+          "hi": 2.09,
+          "yi": 0.3220834991691132,
+          "sei": 0.2121148021102754,
+          "weight_pct": 30.2,
+          "comparator_type": "moderate",
+          "src": "Ellis 2026, JAMA, Table 3 (unadjusted); events, Figure 2 legend"
+        }
+      ],
+      "leave_one_out": [
+        {
+          "omitted": "HYPO-RT-PC",
+          "hr": 1.021,
+          "lo": 0.547,
+          "hi": 1.904,
+          "I2": 72.5
+        },
+        {
+          "omitted": "PACE-B",
+          "hr": 1.045,
+          "lo": 0.653,
+          "hi": 1.671,
+          "I2": 76.5
+        },
+        {
+          "omitted": "NRG-GU005",
+          "hr": 0.833,
+          "lo": 0.693,
+          "hi": 1.002,
+          "I2": 0.0
+        }
+      ],
+      "total_n": 2772
+    },
+    "biochemical_failure": {
+      "outcome": "biochemical_failure",
+      "label": "Biochemical failure (harmonised endpoint sensitivity)",
+      "k": 3,
+      "estimator": "Paule-Mandel + modified Hartung-Knapp",
+      "hr_random": 1.009,
+      "ci_random": [
+        0.322,
+        3.159
+      ],
+      "hr_fixed": 0.905,
+      "pred_interval": [
+        0.002,
+        453.021
+      ],
+      "pred_interval_informative": false,
+      "Q": 6.373,
+      "df": 2,
+      "p_Q": 0.0402,
+      "I2": 68.6,
+      "tau2": 0.16064,
+      "hk": {
+        "df": 2,
+        "t_crit": 4.303,
+        "se": 0.26523,
+        "se_classic": 0.26523,
+        "floor_applied": false
+      },
+      "sens_dl": {
+        "hr": 0.996,
+        "ci": [
+          0.644,
+          1.541
+        ],
+        "tau2": 0.1008
+      },
+      "sens_bayes": {
+        "hr": 0.972,
+        "ci": [
+          0.556,
+          1.886
+        ],
+        "tau_median": 0.3493,
+        "prior": "half-normal(0, 0.5) on tau"
+      },
+      "studies": [
+        {
+          "study": "HYPO-RT-PC",
+          "label": "HYPO-RT-PC (10-y)",
+          "hr": 0.86,
+          "lo": 0.7,
+          "hi": 1.06,
+          "yi": -0.15082288973458366,
+          "sei": 0.1058549685952733,
+          "weight_pct": 40.9,
+          "comparator_type": "conventional",
+          "src": "Nilsson 2026, Lancet Oncol, Suppl. Table 3 (unadjusted)"
+        },
+        {
+          "study": "PACE-B",
+          "label": "PACE-B (5-y)",
+          "hr": 0.73,
+          "lo": 0.44,
+          "hi": 1.21,
+          "yi": -0.31471074483970024,
+          "sei": 0.25806619908780437,
+          "weight_pct": 31.0,
+          "comparator_type": "mixed",
+          "src": "van As 2024, N Engl J Med, Results (biochemical or clinical failure)"
+        },
+        {
+          "study": "NRG-GU005",
+          "label": "NRG-GU005 (3-y)",
+          "hr": 1.82,
+          "lo": 1.03,
+          "hi": 3.33,
+          "yi": 0.598836501088704,
+          "sei": 0.2993456795651716,
+          "weight_pct": 28.1,
+          "comparator_type": "moderate",
+          "src": "Ellis 2026, JAMA, Table 3 (unadjusted)"
+        }
+      ],
+      "leave_one_out": [
+        {
+          "omitted": "HYPO-RT-PC",
+          "hr": 1.138,
+          "lo": 0.465,
+          "hi": 2.785,
+          "I2": 81.3
+        },
+        {
+          "omitted": "PACE-B",
+          "hr": 1.187,
+          "lo": 0.574,
+          "hi": 2.458,
+          "I2": 82.1
+        },
+        {
+          "omitted": "NRG-GU005",
+          "hr": 0.84,
+          "lo": 0.693,
+          "hi": 1.018,
+          "I2": 0.0
+        }
+      ],
+      "total_n": 2772
+    },
+    "late_gu_g2": {
+      "outcome": "late_gu_g2",
+      "label": "Late genitourinary adverse events, grade >=2",
+      "k": 2,
+      "estimator": "Paule-Mandel + modified Hartung-Knapp",
+      "hr_random": 1.253,
+      "ci_random": [
+        0.07,
+        22.314
+      ],
+      "hr_fixed": 1.186,
+      "pred_interval": [
+        0.011,
+        138.254
+      ],
+      "pred_interval_informative": false,
+      "Q": 5.953,
+      "df": 1,
+      "p_Q": 0.0141,
+      "I2": 83.2,
+      "tau2": 0.08566,
+      "hk": {
+        "df": 1,
+        "t_crit": 12.706,
+        "se": 0.22662,
+        "se_classic": 0.22662,
+        "floor_applied": false
+      },
+      "sens_dl": {
+        "hr": 1.253,
+        "ci": [
+          0.804,
+          1.954
+        ],
+        "tau2": 0.08566
+      },
+      "sens_bayes": {
+        "hr": 1.241,
+        "ci": [
+          0.609,
+          2.621
+        ],
+        "tau_median": 0.3512,
+        "prior": "half-normal(0, 0.5) on tau"
+      },
+      "studies": [
+        {
+          "study": "HYPO-RT-PC",
+          "label": "HYPO-RT-PC (10-y)",
+          "hr": 1.01,
+          "lo": 0.81,
+          "hi": 1.25,
+          "yi": 0.009950330853168092,
+          "sei": 0.1106817742703771,
+          "weight_pct": 52.5,
+          "comparator_type": "conventional",
+          "src": "Nilsson 2026, Lancet Oncol, Abstract"
+        },
+        {
+          "study": "PACE-B",
+          "label": "PACE-B (5-y)",
+          "hr": 1.59,
+          "lo": 1.18,
+          "hi": 2.12,
+          "yi": 0.4637340162321402,
+          "sei": 0.14946745318482008,
+          "weight_pct": 47.5,
+          "comparator_type": "mixed",
+          "src": "van As 2024, N Engl J Med, Results"
+        }
+      ],
+      "leave_one_out": [],
+      "total_n": 2074
+    },
+    "late_gi_g2": {
+      "outcome": "late_gi_g2",
+      "label": "Late gastrointestinal adverse events, grade >=2",
+      "k": 2,
+      "estimator": "Paule-Mandel + modified Hartung-Knapp",
+      "hr_random": 0.97,
+      "ci_random": [
+        0.199,
+        4.722
+      ],
+      "hr_fixed": 0.97,
+      "pred_interval": [
+        0.199,
+        4.722
+      ],
+      "pred_interval_informative": false,
+      "Q": 0.122,
+      "df": 1,
+      "p_Q": 0.7251,
+      "I2": 0.0,
+      "tau2": 0.0,
+      "hk": {
+        "df": 1,
+        "t_crit": 12.706,
+        "se": 0.12454,
+        "se_classic": 0.12454,
+        "floor_applied": true
+      },
+      "sens_dl": {
+        "hr": 0.97,
+        "ci": [
+          0.76,
+          1.238
+        ],
+        "tau2": 0.0
+      },
+      "sens_bayes": {
+        "hr": 0.975,
+        "ci": [
+          0.545,
+          1.768
+        ],
+        "tau_median": 0.2011,
+        "prior": "half-normal(0, 0.5) on tau"
+      },
+      "studies": [
+        {
+          "study": "HYPO-RT-PC",
+          "label": "HYPO-RT-PC (10-y)",
+          "hr": 0.94,
+          "lo": 0.7,
+          "hi": 1.28,
+          "yi": -0.06187540371808753,
+          "sei": 0.15396584494176052,
+          "weight_pct": 65.4,
+          "comparator_type": "conventional",
+          "src": "Nilsson 2026, Lancet Oncol, Abstract"
+        },
+        {
+          "study": "PACE-B",
+          "label": "PACE-B (5-y)",
+          "hr": 1.03,
+          "lo": 0.68,
+          "hi": 1.56,
+          "yi": 0.02955880224154443,
+          "sei": 0.21182743882620086,
+          "weight_pct": 34.6,
+          "comparator_type": "mixed",
+          "src": "van As 2024, N Engl J Med, Results"
+        }
+      ],
+      "leave_one_out": [],
+      "total_n": 2074
+    },
+    "overall_survival": {
+      "outcome": "overall_survival",
+      "label": "Overall survival",
+      "k": 3,
+      "estimator": "Paule-Mandel + modified Hartung-Knapp",
+      "hr_random": 1.055,
+      "ci_random": [
+        0.584,
+        1.905
+      ],
+      "hr_fixed": 0.989,
+      "pred_interval": [
+        0.085,
+        13.072
+      ],
+      "pred_interval_informative": false,
+      "Q": 3.404,
+      "df": 2,
+      "p_Q": 0.18,
+      "I2": 41.3,
+      "tau2": 0.02037,
+      "hk": {
+        "df": 2,
+        "t_crit": 4.303,
+        "se": 0.13735,
+        "se_classic": 0.13735,
+        "floor_applied": false
+      },
+      "sens_dl": {
+        "hr": 1.074,
+        "ci": [
+          0.792,
+          1.455
+        ],
+        "tau2": 0.03193
+      },
+      "sens_bayes": {
+        "hr": 1.066,
+        "ci": [
+          0.682,
+          1.886
+        ],
+        "tau_median": 0.2499,
+        "prior": "half-normal(0, 0.5) on tau"
+      },
+      "studies": [
+        {
+          "study": "PACE-B",
+          "label": "PACE-B (5-y)",
+          "hr": 1.41,
+          "lo": 0.9,
+          "hi": 2.2,
+          "yi": 0.34358970439007686,
+          "sei": 0.2280189541931428,
+          "weight_pct": 26.1,
+          "comparator_type": "mixed",
+          "src": "van As 2024, N Engl J Med, Results"
+        },
+        {
+          "study": "HYPO-RT-PC",
+          "label": "HYPO-RT-PC (10-y)",
+          "hr": 0.91,
+          "lo": 0.75,
+          "hi": 1.11,
+          "yi": -0.09431067947124129,
+          "sei": 0.10001257443208186,
+          "weight_pct": 62.1,
+          "comparator_type": "conventional",
+          "src": "Nilsson 2026, Lancet Oncol, Suppl. Table 3 (unadjusted)"
+        },
+        {
+          "study": "NRG-GU005",
+          "label": "NRG-GU005 (3-y)",
+          "hr": 1.21,
+          "lo": 0.54,
+          "hi": 2.33,
+          "yi": 0.1906203596086497,
+          "sei": 0.37297991660406127,
+          "weight_pct": 11.8,
+          "comparator_type": "moderate",
+          "src": "Ellis 2026, JAMA, Table 3 (unadjusted); deaths, Figure 2 legend"
+        }
+      ],
+      "leave_one_out": [
+        {
+          "omitted": "PACE-B",
+          "hr": 0.928,
+          "lo": 0.768,
+          "hi": 1.121,
+          "I2": 0.0
+        },
+        {
+          "omitted": "HYPO-RT-PC",
+          "hr": 1.353,
+          "lo": 0.924,
+          "hi": 1.98,
+          "I2": 0.0
+        },
+        {
+          "omitted": "NRG-GU005",
+          "hr": 1.08,
+          "lo": 0.71,
+          "hi": 1.641,
+          "I2": 67.7
+        }
+      ],
+      "total_n": 2772
+    }
+  },
+  "binary": {
+    "gu_g3plus": {
+      "label": "Grade >=3 genitourinary adverse events",
+      "k": 1,
+      "studies": [
+        {
+          "study": "NRG-GU005",
+          "label": "NRG-GU005 (3-y)",
+          "rr": 0.229,
+          "lo": 0.049,
+          "hi": 1.072,
+          "se_log": 0.7868,
+          "ev_exp": 2,
+          "n_exp": 352,
+          "ev_ctrl": 8,
+          "n_ctrl": 323,
+          "src": "Ellis 2026, JAMA, Supplement 2, eTable 4"
+        }
+      ],
+      "poolable": false
+    },
+    "gi_g3plus": {
+      "label": "Grade >=3 gastrointestinal adverse events",
+      "k": 1,
+      "studies": [
+        {
+          "study": "NRG-GU005",
+          "label": "NRG-GU005 (3-y)",
+          "rr": 0.393,
+          "lo": 0.103,
+          "hi": 1.508,
+          "se_log": 0.6858,
+          "ev_exp": 3,
+          "n_exp": 352,
+          "ev_ctrl": 7,
+          "n_ctrl": 323,
+          "src": "Ellis 2026, JAMA, Supplement 2, eTable 4"
+        }
+      ],
+      "poolable": false
+    },
+    "epic_bowel_mcid_2y": {
+      "label": "EPIC-26 bowel domain, MCID decline at 2 y",
+      "k": 1,
+      "studies": [
+        {
+          "study": "NRG-GU005",
+          "label": "NRG-GU005 (3-y)",
+          "rr": 0.798,
+          "lo": 0.647,
+          "hi": 0.984,
+          "se_log": 0.1068,
+          "ev_exp": 101,
+          "n_exp": 289,
+          "ev_ctrl": 113,
+          "n_ctrl": 258,
+          "src": "Ellis 2026, JAMA, Table 2 (denominators back-calculated from printed percentages)"
+        }
+      ],
+      "poolable": false
+    },
+    "epic_urinary_irritative_mcid_2y": {
+      "label": "EPIC-26 urinary irritative/obstructive, MCID decline at 2 y",
+      "k": 1,
+      "studies": [
+        {
+          "study": "NRG-GU005",
+          "label": "NRG-GU005 (3-y)",
+          "rr": 1.052,
+          "lo": 0.843,
+          "hi": 1.314,
+          "se_log": 0.1133,
+          "ev_exp": 102,
+          "n_exp": 288,
+          "ev_ctrl": 102,
+          "n_ctrl": 303,
+          "src": "Ellis 2026, JAMA, Table 2 (denominators back-calculated from printed percentages)"
+        }
+      ],
+      "poolable": false
+    }
+  },
+  "pooling_decisions": {
+    "efficacy_primary": {
+      "primary_presentation": "pooled",
+      "rule_triggered": false,
+      "k": 3,
+      "I2": 60.3,
+      "named_modifier": null,
+      "pooled_estimate_status": "primary"
+    },
+    "late_gu_g2": {
+      "primary_presentation": "separate estimates",
+      "rule_triggered": true,
+      "k": 2,
+      "I2": 83.2,
+      "named_modifier": "Late normal-tissue (urethral) dose differential between HYPO-RT-PC and PACE-B",
+      "pooled_estimate_status": "sensitivity only - not the primary presentation"
+    },
+    "late_gi_g2": {
+      "primary_presentation": "pooled",
+      "rule_triggered": false,
+      "k": 2,
+      "I2": 0.0,
+      "named_modifier": null,
+      "pooled_estimate_status": "primary"
+    },
+    "overall_survival": {
+      "primary_presentation": "pooled",
+      "rule_triggered": false,
+      "k": 3,
+      "I2": 41.3,
+      "named_modifier": null,
+      "pooled_estimate_status": "primary"
+    }
+  },
+  "late_tissue_dose": [
+    {
+      "study": "HYPO-RT-PC",
+      "label": "HYPO-RT-PC (10-y)",
+      "alpha_beta": 3.0,
+      "eqd2_control": 78.0,
+      "src_dose": "Nilsson 2026, Lancet Oncol, Suppl. Table 1",
+      "eqd2_urethra": 77.7,
+      "delta_urethra": -0.3,
+      "eqd2_rectum": 77.7,
+      "delta_rectum": -0.3,
+      "gu_hr": 1.01,
+      "gu_lo": 0.81,
+      "gu_hi": 1.25,
+      "gi_hr": 0.94,
+      "gi_lo": 0.7,
+      "gi_hi": 1.28
+    },
+    {
+      "study": "HYPO-RT-PC",
+      "label": "HYPO-RT-PC (10-y)",
+      "alpha_beta": 5.0,
+      "eqd2_control": 78.0,
+      "src_dose": "Nilsson 2026, Lancet Oncol, Suppl. Table 1",
+      "eqd2_urethra": 67.7,
+      "delta_urethra": -10.3,
+      "eqd2_rectum": 67.7,
+      "delta_rectum": -10.3,
+      "gu_hr": 1.01,
+      "gu_lo": 0.81,
+      "gu_hi": 1.25,
+      "gi_hr": 0.94,
+      "gi_lo": 0.7,
+      "gi_hi": 1.28
+    },
+    {
+      "study": "PACE-B",
+      "label": "PACE-B (5-y)",
+      "alpha_beta": 3.0,
+      "eqd2_control": 75.6,
+      "src_dose": "van As 2024, N Engl J Med, Methods",
+      "eqd2_urethra": 88.0,
+      "delta_urethra": 12.4,
+      "eqd2_rectum": 74.3,
+      "delta_rectum": -1.3,
+      "gu_hr": 1.59,
+      "gu_lo": 1.18,
+      "gu_hi": 2.12,
+      "gi_hr": 1.03,
+      "gi_lo": 0.68,
+      "gi_hi": 1.56
+    },
+    {
+      "study": "PACE-B",
+      "label": "PACE-B (5-y)",
+      "alpha_beta": 5.0,
+      "eqd2_control": 71.7,
+      "src_dose": "van As 2024, N Engl J Med, Methods",
+      "eqd2_urethra": 74.3,
+      "delta_urethra": 2.5,
+      "eqd2_rectum": 63.4,
+      "delta_rectum": -8.3,
+      "gu_hr": 1.59,
+      "gu_lo": 1.18,
+      "gu_hi": 2.12,
+      "gi_hr": 1.03,
+      "gi_lo": 0.68,
+      "gi_hi": 1.56
+    },
+    {
+      "study": "NRG-GU005",
+      "label": "NRG-GU005 (3-y)",
+      "alpha_beta": 3.0,
+      "eqd2_control": 77.0,
+      "src_dose": "Ellis 2026, JAMA, Methods",
+      "eqd2_urethra": 83.4,
+      "delta_urethra": 6.4,
+      "eqd2_rectum": 74.3,
+      "delta_rectum": -2.7,
+      "gu_hr": null,
+      "gu_lo": null,
+      "gu_hi": null,
+      "gi_hr": null,
+      "gi_lo": null,
+      "gi_hi": null
+    },
+    {
+      "study": "NRG-GU005",
+      "label": "NRG-GU005 (3-y)",
+      "alpha_beta": 5.0,
+      "eqd2_control": 75.0,
+      "src_dose": "Ellis 2026, JAMA, Methods",
+      "eqd2_urethra": 70.7,
+      "delta_urethra": -4.3,
+      "eqd2_rectum": 63.4,
+      "delta_rectum": -11.6,
+      "gu_hr": null,
+      "gu_lo": null,
+      "gu_hi": null,
+      "gi_hr": null,
+      "gi_lo": null,
+      "gi_hi": null
+    }
+  ],
+  "absolute_effects": [
+    {
+      "outcome": "Late GU adverse events, grade >=2",
+      "study": "HYPO-RT-PC",
+      "label": "HYPO-RT-PC (10-y)",
+      "horizon_y": 10,
+      "risk_exp_pct": 28.3,
+      "risk_ctrl_pct": 30.1,
+      "risk_difference_pp": -1.8,
+      "measure": "NNT",
+      "n": 56,
+      "n_exact": 55.6,
+      "favours": "experimental",
+      "src": "Nilsson 2026, Lancet Oncol, Suppl. Table 4"
+    },
+    {
+      "outcome": "Late GU adverse events, grade >=2",
+      "study": "PACE-B",
+      "label": "PACE-B (5-y)",
+      "horizon_y": 5,
+      "risk_exp_pct": 26.9,
+      "risk_ctrl_pct": 18.3,
+      "risk_difference_pp": 8.6,
+      "measure": "NNH",
+      "n": 12,
+      "n_exact": 11.6,
+      "favours": "comparator",
+      "src": "van As 2024, N Engl J Med, Results"
+    },
+    {
+      "outcome": "Late GI adverse events, grade >=2",
+      "study": "HYPO-RT-PC",
+      "label": "HYPO-RT-PC (10-y)",
+      "horizon_y": 10,
+      "risk_exp_pct": 14.4,
+      "risk_ctrl_pct": 14.5,
+      "risk_difference_pp": -0.1,
+      "measure": "NNT",
+      "n": 1000,
+      "n_exact": 1000.0,
+      "favours": "experimental",
+      "src": "Nilsson 2026, Lancet Oncol, Suppl. Table 4"
+    },
+    {
+      "outcome": "Late GI adverse events, grade >=2",
+      "study": "PACE-B",
+      "label": "PACE-B (5-y)",
+      "horizon_y": 5,
+      "risk_exp_pct": 10.7,
+      "risk_ctrl_pct": 10.2,
+      "risk_difference_pp": 0.5,
+      "measure": "NNH",
+      "n": 200,
+      "n_exact": 200.0,
+      "favours": "comparator",
+      "src": "van As 2024, N Engl J Med, Results"
+    },
+    {
+      "outcome": "GU adverse events, grade >=3",
+      "study": "NRG-GU005",
+      "label": "NRG-GU005 (3-y)",
+      "horizon_y": 3,
+      "risk_exp_pct": 0.57,
+      "risk_ctrl_pct": 2.48,
+      "risk_difference_pp": -1.9,
+      "measure": "NNT",
+      "n": 52,
+      "n_exact": 52.4,
+      "favours": "experimental",
+      "src": "Ellis 2026, JAMA, Supplement 2, eTable 4 (2/352 vs 8/323)"
+    },
+    {
+      "outcome": "EPIC-26 bowel domain, MCID decline",
+      "study": "NRG-GU005",
+      "label": "NRG-GU005 (3-y)",
+      "horizon_y": 2,
+      "risk_exp_pct": 34.9,
+      "risk_ctrl_pct": 43.8,
+      "risk_difference_pp": -8.9,
+      "measure": "NNT",
+      "n": 11,
+      "n_exact": 11.2,
+      "favours": "experimental",
+      "src": "Ellis 2026, JAMA, Table 2"
+    },
+    {
+      "outcome": "Oncological failure",
+      "study": "HYPO-RT-PC",
+      "label": "HYPO-RT-PC (10-y)",
+      "horizon_y": 10,
+      "risk_exp_pct": 28.5,
+      "risk_ctrl_pct": 35.0,
+      "risk_difference_pp": -6.5,
+      "measure": "NNT",
+      "n": 15,
+      "n_exact": 15.4,
+      "favours": "experimental",
+      "src": "Nilsson 2026, Lancet Oncol, Suppl. Table 3 (100 minus 10-y FFS)"
+    },
+    {
+      "outcome": "Oncological failure",
+      "study": "PACE-B",
+      "label": "PACE-B (5-y)",
+      "horizon_y": 5,
+      "risk_exp_pct": 4.2,
+      "risk_ctrl_pct": 5.4,
+      "risk_difference_pp": -1.2,
+      "measure": "NNT",
+      "n": 83,
+      "n_exact": 83.3,
+      "favours": "experimental",
+      "src": "van As 2024, N Engl J Med, Abstract (100 minus 5-y freedom from failure)"
+    },
+    {
+      "outcome": "Oncological failure",
+      "study": "NRG-GU005",
+      "label": "NRG-GU005 (3-y)",
+      "horizon_y": 3,
+      "risk_exp_pct": 11.4,
+      "risk_ctrl_pct": 7.9,
+      "risk_difference_pp": 3.5,
+      "measure": "NNH",
+      "n": 29,
+      "n_exact": 28.6,
+      "favours": "comparator",
+      "src": "Ellis 2026, JAMA, Results (100 minus 3-y DFS)"
+    }
+  ],
+  "dose_effect": [
+    {
+      "study": "HYPO-RT-PC",
+      "label": "HYPO-RT-PC (10-y)",
+      "top_dose_gy": 42.7,
+      "n_fx": 7,
+      "eqd2_top_ab1_5": 92.7,
+      "dose_definition": "prescription dose",
+      "efficacy_hr": 0.85,
+      "efficacy_lo": 0.7,
+      "efficacy_hi": 1.04,
+      "gu_hr": 1.01,
+      "gu_lo": 0.81,
+      "gu_hi": 1.25
+    },
+    {
+      "study": "PACE-B",
+      "label": "PACE-B (5-y)",
+      "top_dose_gy": 40.0,
+      "n_fx": 5,
+      "eqd2_top_ab1_5": 108.6,
+      "dose_definition": "40 Gy to 95% of CTV (integrated boost)",
+      "efficacy_hr": 0.73,
+      "efficacy_lo": 0.44,
+      "efficacy_hi": 1.21,
+      "gu_hr": 1.59,
+      "gu_lo": 1.18,
+      "gu_hi": 2.12
+    },
+    {
+      "study": "NRG-GU005",
+      "label": "NRG-GU005 (3-y)",
+      "top_dose_gy": 38.78,
+      "n_fx": 5,
+      "eqd2_top_ab1_5": 102.6,
+      "dose_definition": "38.78 Gy max PTV (capped)",
+      "efficacy_hr": 1.38,
+      "efficacy_lo": 0.91,
+      "efficacy_hi": 2.09,
+      "gu_hr": null,
+      "gu_lo": null,
+      "gu_hi": null
+    }
+  ],
+  "information_size": {
+    "hr_target": 0.85,
+    "alpha": 0.05,
+    "power": 0.8,
+    "required_events": 1189,
+    "diversity_D2_pct": 74.1,
+    "required_events_adjusted": 4590,
+    "accrued": [
+      {
+        "study": "HYPO-RT-PC",
+        "label": "HYPO-RT-PC (10-y)",
+        "events": 383,
+        "src": "Nilsson 2026, Lancet Oncol, Suppl. Table 3 (unadjusted)"
+      },
+      {
+        "study": "PACE-B",
+        "label": "PACE-B (5-y)",
+        "events": 62,
+        "src": "van As 2024, N Engl J Med, Results (95% CI)"
+      },
+      {
+        "study": "NRG-GU005",
+        "label": "NRG-GU005 (3-y)",
+        "events": 90,
+        "src": "Ellis 2026, JAMA, Table 3 (unadjusted); events, Figure 2 legend"
+      }
+    ],
+    "accrued_events_total": 535,
+    "n_studies_with_events": 3,
+    "k": 3,
+    "fraction_naive": 45.0,
+    "fraction_adjusted": 11.7
+  }
+}
