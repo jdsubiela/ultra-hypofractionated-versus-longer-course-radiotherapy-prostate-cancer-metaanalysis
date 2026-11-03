@@ -59,11 +59,12 @@ def main():
     write("synthesis_ipd.json", {"seed": SEED, "versions": versions, **ipd})
 
     print("Aggregate meta-analysis (Paule-Mandel + modified Hartung-Knapp)")
-    for o in agg["outcomes"].values():
+    for key, o in agg["outcomes"].items():
         est = (f"HR {r2(o['hr_random'])} ({r2(o['ci_random'][0])} to {r2(o['ci_random'][1])})"
                if "hr_random" in o else "not pooled")
         print(f"  {o['label']:<55} k={o['k']}  {est}  "
-              f"I2={o['I2']:.0f}%  tau2={o['tau2']:.4f}")
+              f"I2={o['I2']:.0f}%  tau2={o['tau2']:.4f}  "
+              f"[{agg['presentation'][key]['presentation']}]")
     n_pass = sum(m["pass"] for a in qa.values() for m in a["milestones"])
     n_all = sum(len(a["milestones"]) for a in qa.values())
     n_ok = sum(a["pass"] for a in qa.values())
