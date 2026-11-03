@@ -36,6 +36,12 @@ def write(name, obj):
         json.dump(obj, f, indent=2)
 
 
+def r2(x):
+    """Two decimals, rounding half up (1.055 is 1.06)."""
+    from decimal import Decimal, ROUND_HALF_UP
+    return str(Decimal(str(x)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
+
+
 def main():
     np.random.seed(SEED)
     os.makedirs(RESULTS, exist_ok=True)
@@ -54,8 +60,9 @@ def main():
 
     print("Aggregate meta-analysis (Paule-Mandel + modified Hartung-Knapp)")
     for o in agg["outcomes"].values():
-        print(f"  {o['label']:<55} k={o['k']}  HR {o['hr_random']:.2f} "
-              f"({o['ci_random'][0]:.2f} to {o['ci_random'][1]:.2f})  "
+        est = (f"HR {r2(o['hr_random'])} ({r2(o['ci_random'][0])} to {r2(o['ci_random'][1])})"
+               if "hr_random" in o else "not pooled")
+        print(f"  {o['label']:<55} k={o['k']}  {est}  "
               f"I2={o['I2']:.0f}%  tau2={o['tau2']:.4f}")
     n_pass = sum(m["pass"] for a in qa.values() for m in a["milestones"])
     n_all = sum(len(a["milestones"]) for a in qa.values())

@@ -127,14 +127,15 @@ def binary_block(binary, studies):
     return out
 
 
-def pooling_decision(oc, modifier):
-    """Separate estimates when k < 3, I2 > 75% and a named effect modifier exists."""
-    triggered = oc["k"] < 3 and oc["I2"] > 75 and modifier is not None
-    return {"primary_presentation": "separate estimates" if triggered else "pooled",
-            "rule_triggered": triggered, "k": oc["k"], "I2": oc["I2"],
-            "named_modifier": modifier,
-            "pooled_estimate_status": ("sensitivity only - not the primary presentation"
-                                       if triggered else "primary")}
+def presentation(key, oc):
+    """How each outcome is presented in the paper."""
+    if oc["k"] < 3:
+        mode = "trial-specific estimates, not pooled (two trials)"
+    elif key in ("efficacy_primary", "biochemical_failure"):
+        mode = "trial-specific estimates; pooled value is a descriptive summary"
+    else:
+        mode = "pooled effect"
+    return {"presentation": mode, "k": oc["k"]}
 
 
 def late_tissue_dose(studies, organ_dose, hr_outcomes, ab_values=(3.0, 5.0)):
@@ -230,18 +231,18 @@ def information_size(oc, outcome_data, hr_target=0.85, alpha=0.05, power=0.80):
 def run(trials):
     S, HR = trials.STUDIES, trials.HR_OUTCOMES
     outcomes = {k: pool_outcome(k, HR[k], S) for k in POOLED_OUTCOMES}
-    gu_modifier = ("Late normal-tissue (urethral) dose differential between "
-                   "HYPO-RT-PC and PACE-B")
+    # Two-trial outcomes are presented trial by trial: no pooled estimate is kept,
+    # only the heterogeneity statistics shown in Figure 4.
+    for o in outcomes.values():
+        if o["k"] < 3:
+            for key in [x for x in o if x.startswith(("hr_", "ci_", "pred_interval", "sens_", "hk",
+                                                          "leave_one_out", "estimator"))]:
+                del o[key]
     return {
         "eqd2": eqd2_table(S),
         "outcomes": outcomes,
         "binary": binary_block(trials.BINARY_OUTCOMES, S),
-        "pooling_decisions": {
-            "efficacy_primary": pooling_decision(outcomes["efficacy_primary"], None),
-            "late_gu_g2": pooling_decision(outcomes["late_gu_g2"], gu_modifier),
-            "late_gi_g2": pooling_decision(outcomes["late_gi_g2"], None),
-            "overall_survival": pooling_decision(outcomes["overall_survival"], None),
-        },
+        "presentation": {k: presentation(k, o) for k, o in outcomes.items()},
         "late_tissue_dose": late_tissue_dose(S, trials.ORGAN_DOSE, HR),
         "absolute_effects": absolute_effects(trials.ABSOLUTE_RISKS, S),
         "dose_effect": dose_effect(S, HR),

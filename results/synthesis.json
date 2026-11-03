@@ -192,7 +192,7 @@
     },
     "biochemical_failure": {
       "outcome": "biochemical_failure",
-      "label": "Biochemical failure (harmonised endpoint sensitivity)",
+      "label": "Biochemical failure",
       "k": 3,
       "estimator": "Paule-Mandel + modified Hartung-Knapp",
       "hr_random": 1.009,
@@ -302,47 +302,11 @@
       "outcome": "late_gu_g2",
       "label": "Late genitourinary adverse events, grade >=2",
       "k": 2,
-      "estimator": "Paule-Mandel + modified Hartung-Knapp",
-      "hr_random": 1.253,
-      "ci_random": [
-        0.07,
-        22.314
-      ],
-      "hr_fixed": 1.186,
-      "pred_interval": [
-        0.011,
-        138.254
-      ],
-      "pred_interval_informative": false,
       "Q": 5.953,
       "df": 1,
       "p_Q": 0.0147,
       "I2": 83.2,
       "tau2": 0.08566,
-      "hk": {
-        "df": 1,
-        "t_crit": 12.706,
-        "se": 0.22662,
-        "se_classic": 0.22662,
-        "floor_applied": false
-      },
-      "sens_dl": {
-        "hr": 1.253,
-        "ci": [
-          0.804,
-          1.954
-        ],
-        "tau2": 0.08566
-      },
-      "sens_bayes": {
-        "hr": 1.241,
-        "ci": [
-          0.609,
-          2.621
-        ],
-        "tau_median": 0.3512,
-        "prior": "half-normal(0, 0.5) on tau"
-      },
       "studies": [
         {
           "study": "HYPO-RT-PC",
@@ -369,54 +333,17 @@
           "src": "van As 2024, N Engl J Med, Results"
         }
       ],
-      "leave_one_out": [],
       "total_n": 2074
     },
     "late_gi_g2": {
       "outcome": "late_gi_g2",
       "label": "Late gastrointestinal adverse events, grade >=2",
       "k": 2,
-      "estimator": "Paule-Mandel + modified Hartung-Knapp",
-      "hr_random": 0.97,
-      "ci_random": [
-        0.199,
-        4.722
-      ],
-      "hr_fixed": 0.97,
-      "pred_interval": [
-        0.199,
-        4.722
-      ],
-      "pred_interval_informative": false,
       "Q": 0.122,
       "df": 1,
       "p_Q": 0.727,
       "I2": 0.0,
       "tau2": 0.0,
-      "hk": {
-        "df": 1,
-        "t_crit": 12.706,
-        "se": 0.12454,
-        "se_classic": 0.12454,
-        "floor_applied": true
-      },
-      "sens_dl": {
-        "hr": 0.97,
-        "ci": [
-          0.76,
-          1.238
-        ],
-        "tau2": 0.0
-      },
-      "sens_bayes": {
-        "hr": 0.975,
-        "ci": [
-          0.545,
-          1.768
-        ],
-        "tau_median": 0.2011,
-        "prior": "half-normal(0, 0.5) on tau"
-      },
       "studies": [
         {
           "study": "HYPO-RT-PC",
@@ -443,7 +370,6 @@
           "src": "van As 2024, N Engl J Med, Results"
         }
       ],
-      "leave_one_out": [],
       "total_n": 2074
     },
     "overall_survival": {
@@ -637,38 +563,26 @@
       "poolable": false
     }
   },
-  "pooling_decisions": {
+  "presentation": {
     "efficacy_primary": {
-      "primary_presentation": "pooled",
-      "rule_triggered": false,
-      "k": 3,
-      "I2": 60.3,
-      "named_modifier": null,
-      "pooled_estimate_status": "primary"
+      "presentation": "trial-specific estimates; pooled value is a descriptive summary",
+      "k": 3
+    },
+    "biochemical_failure": {
+      "presentation": "trial-specific estimates; pooled value is a descriptive summary",
+      "k": 3
     },
     "late_gu_g2": {
-      "primary_presentation": "separate estimates",
-      "rule_triggered": true,
-      "k": 2,
-      "I2": 83.2,
-      "named_modifier": "Late normal-tissue (urethral) dose differential between HYPO-RT-PC and PACE-B",
-      "pooled_estimate_status": "sensitivity only - not the primary presentation"
+      "presentation": "trial-specific estimates, not pooled (two trials)",
+      "k": 2
     },
     "late_gi_g2": {
-      "primary_presentation": "pooled",
-      "rule_triggered": false,
-      "k": 2,
-      "I2": 0.0,
-      "named_modifier": null,
-      "pooled_estimate_status": "primary"
+      "presentation": "trial-specific estimates, not pooled (two trials)",
+      "k": 2
     },
     "overall_survival": {
-      "primary_presentation": "pooled",
-      "rule_triggered": false,
-      "k": 3,
-      "I2": 41.3,
-      "named_modifier": null,
-      "pooled_estimate_status": "primary"
+      "presentation": "pooled effect",
+      "k": 3
     }
   },
   "late_tissue_dose": [

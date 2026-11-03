@@ -65,7 +65,7 @@ HR_OUTCOMES = {
         },
     },
     "biochemical_failure": {
-        "label": "Biochemical failure (harmonised endpoint sensitivity)",
+        "label": "Biochemical failure",
         "data": {
             "HYPO-RT-PC": {"hr": 0.86, "lo": 0.70, "hi": 1.06, "ci": 95,
                            "ev_exp": 174, "n_exp": 589, "ev_ctrl": 198, "n_ctrl": 591,
