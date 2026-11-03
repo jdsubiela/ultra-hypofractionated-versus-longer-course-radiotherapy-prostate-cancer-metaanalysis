@@ -100,7 +100,7 @@
       "pred_interval_informative": false,
       "Q": 5.035,
       "df": 2,
-      "p_Q": 0.0786,
+      "p_Q": 0.0807,
       "I2": 60.3,
       "tau2": 0.06273,
       "hk": {
@@ -208,7 +208,7 @@
       "pred_interval_informative": false,
       "Q": 6.373,
       "df": 2,
-      "p_Q": 0.0402,
+      "p_Q": 0.0413,
       "I2": 68.6,
       "tau2": 0.16064,
       "hk": {
@@ -316,7 +316,7 @@
       "pred_interval_informative": false,
       "Q": 5.953,
       "df": 1,
-      "p_Q": 0.0141,
+      "p_Q": 0.0147,
       "I2": 83.2,
       "tau2": 0.08566,
       "hk": {
@@ -390,7 +390,7 @@
       "pred_interval_informative": false,
       "Q": 0.122,
       "df": 1,
-      "p_Q": 0.7251,
+      "p_Q": 0.727,
       "I2": 0.0,
       "tau2": 0.0,
       "hk": {
@@ -464,7 +464,7 @@
       "pred_interval_informative": false,
       "Q": 3.404,
       "df": 2,
-      "p_Q": 0.18,
+      "p_Q": 0.1823,
       "I2": 41.3,
       "tau2": 0.02037,
       "hk": {

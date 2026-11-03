@@ -20,11 +20,10 @@ def t975(df):
 
 
 def _chi2_sf(x, df):
-    """Upper-tail chi-square probability, Wilson-Hilferty approximation."""
+    """Upper-tail chi-square probability (exact)."""
     if df <= 0 or x <= 0:
         return 1.0
-    z = ((x / df) ** (1.0 / 3.0) - (1 - 2.0 / (9 * df))) / math.sqrt(2.0 / (9 * df))
-    return 1.0 - 0.5 * (1.0 + math.erf(z / math.sqrt(2.0)))
+    return float(stats.chi2.sf(x, df))
 
 
 @dataclass
