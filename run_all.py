@@ -6,7 +6,7 @@
 Writes:
   results/synthesis.json            aggregate-data meta-analysis
   results/reconstruction_qa.json    IPD reconstruction validation checks
-  results/synthesis_ipd.json        analyses on the reconstructed IPD
+  results/synthesis_ipd.json        exploratory analyses on the reconstructed IPD
   results/reconstructed_ipd/*.csv   reconstructed IPD (regenerated each run)
 """
 import json
@@ -70,7 +70,7 @@ def main():
     n_ok = sum(a["pass"] for a in qa.values())
     print(f"IPD reconstruction: {n_ok}/{len(qa)} arms pass validation; "
           f"{n_pass}/{n_all} milestone checks pass")
-    print("IPD, common-effect HR with follow-up truncated at each horizon")
+    print("IPD (exploratory), common-effect HR with follow-up truncated at each horizon")
     for g, blocks in ipd["meta"].items():
         for key, b in blocks.items():
             if key.startswith("landmark"):

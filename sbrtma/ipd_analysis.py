@@ -139,13 +139,13 @@ def pool_landmark(pairs, outcomes, lm):
     se = math.sqrt(1.0 / np.sum(w))
     pm = pooling.pool_pm_hk(yi, sei)
     out = {"k": dl.k, "trials": trials, "model": "common effect",
-           "hr": round(math.exp(mu), 3),
-           "lo": round(math.exp(mu - 1.96 * se), 3),
-           "hi": round(math.exp(mu + 1.96 * se), 3),
+           "hr": round(math.exp(mu), 4),
+           "lo": round(math.exp(mu - 1.96 * se), 4),
+           "hi": round(math.exp(mu + 1.96 * se), 4),
            "I2": round(dl.I2, 1), "tau2": round(dl.tau2, 5), "p_Q": round(dl.p_Q, 4),
-           "random_pm_hk": {"hr": round(math.exp(pm["est"]), 3),
-                            "lo": round(math.exp(pm["ci"][0]), 3),
-                            "hi": round(math.exp(pm["ci"][1]), 3),
+           "random_pm_hk": {"hr": round(math.exp(pm["est"]), 4),
+                            "lo": round(math.exp(pm["ci"][0]), 4),
+                            "hi": round(math.exp(pm["ci"][1]), 4),
                             "tau2": round(pm["tau2"], 5)}}
     if tolerated:
         out["landmark_tolerance_trials"] = tolerated
